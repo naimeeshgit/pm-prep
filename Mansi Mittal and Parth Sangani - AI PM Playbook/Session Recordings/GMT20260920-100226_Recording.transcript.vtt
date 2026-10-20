@@ -1,0 +1,2410 @@
+WEBVTT
+
+1
+00:00:02.730 --> 00:00:06.250
+Rack: That's your second AIPM playbook session.
+
+2
+00:00:06.910 --> 00:00:17.440
+Rack: Bhat is the principal broad manager at Microsoft, and ISP4216 out, and brings 10-plus years of experience working across enterprise organizations such as Microsoft and Amazon.
+
+3
+00:00:17.850 --> 00:00:25.920
+Rack: is currently leading initiative within MT35 co-pilot, and has worked across largely consumer products.
+
+4
+00:00:26.020 --> 00:00:37.929
+Rack: Mansi is a product manager, too, at Microsoft, and I speak 420 to Adam. Over the last few years, she has worked across Microsoft 365 experiences, service, and now AI-first products.
+
+5
+00:00:38.510 --> 00:00:45.070
+Rack: In today's… in today's session, there'll be topics like AI agents, LLMs, prompting.
+
+6
+00:00:45.330 --> 00:00:50.390
+Rack: a lot more practical, what they mean for, broad manager.
+
+7
+00:00:50.600 --> 00:00:57.650
+Rack: When and how they show up in everyday projects, how much that is actually expected in AIPM interviews and roles.
+
+8
+00:00:57.850 --> 00:01:03.010
+Rack: With that, a very warm welcome. We're really glad to have you there.
+
+9
+00:01:15.710 --> 00:01:16.540
+Rack: You bet.
+
+10
+00:01:20.400 --> 00:01:21.299
+Rack: You can't.
+
+11
+00:01:30.720 --> 00:01:35.179
+Rack: Okay, yeah, and thanks so much for the introduction.
+
+12
+00:01:35.210 --> 00:01:51.099
+Rack: So yeah, first of all, thank you so much for joining on this Sunday afternoon. And you know, I have a lot of yield tips and sessions, and, you know, next week, you have midterm as well going on. So, this shows, the zeal right here for the aspiring product managers.
+
+13
+00:01:51.110 --> 00:02:03.170
+Rack: So thank you so much for joining, and thank you so much, you know, Parth as well, for joining us, because Parth has been actually my mentor since I have joined Microsoft for four and a half years, directly from ISB.
+
+14
+00:02:03.290 --> 00:02:17.649
+Rack: So, we have had the opportunity to learn from his, technical depth and, VA experience, day in and day out, our team within Microsoft. But, I'm really excited for folks also to kind of gain from his experience.
+
+15
+00:02:17.650 --> 00:02:26.190
+Rack: So yeah. So what, just to set a bit of context, what I'm showing here is that we are, again, we're covering a bit of fundamentals.
+
+16
+00:02:26.190 --> 00:02:28.760
+Rack: across AI and product management.
+
+17
+00:02:28.760 --> 00:02:52.470
+Rack: And we do have a take-home method for you as well, where you can learn the depth of it, because there are a lot of things to cover. So, rather than using this one hour for all those technicalities, maybe you can take it home, and then you can kind of go through it. And then we'll get past perspective on what, actually, companies are looking forward to hearing, because he's the one who's hiding those folks, right? So, it's always great to listen from
+
+18
+00:02:52.470 --> 00:03:03.610
+Rack: Like, someone who's at that position directly. So that's what we're doing. And, just to understand what's the expectation like for this road to be sustainable going forward.
+
+19
+00:03:03.670 --> 00:03:17.109
+Rack: And then at the end of it, we open the floor for Q&A. We want to keep it very interactive. Given, you know, it's a smaller audience, I think let's just keep it very interactive, so all of us kind of learn from it. Oh, so I think with that.
+
+20
+00:03:18.440 --> 00:03:31.419
+Rack: So yes, have you figured out, you know, who AIC is and how to kind of do it? So maybe you have already spoken to a lot of, models out there, but, let's listen for all of our users. We need to get that
+
+21
+00:03:32.270 --> 00:03:47.799
+Rack: Okay, so before we kind of go into the depth of infographs, agents, LLNs, what I want to start with is very fundamental, and honestly, that you might have already been hearing about in your courses.
+
+22
+00:03:47.800 --> 00:03:57.420
+Rack: Which is, essentially, what is the customer job? So, you might have already had your course by Bronx Fishar, or someone, I'm not sure if it's…
+
+23
+00:03:57.500 --> 00:04:15.270
+Rack: streets, but you would have heard the term that what's your objective of any feature, any product that you're building? So, be it an AI product, be in a, you know, product or feature that is not using an AI technology as well, always begin with the cold, all of the skills that you have.
+
+24
+00:04:15.390 --> 00:04:33.130
+Rack: So, for the entirety of this presentation, what we'll be doing is we'll take an example of a fictional inbox assistant. So, which has access to USA edits, and then this is helping you reply or form a reply on top of that one.
+
+25
+00:04:33.170 --> 00:04:35.600
+Rack: So that's just to set up a bit of context here.
+
+26
+00:04:36.470 --> 00:04:38.180
+Rack: Okay. So…
+
+27
+00:04:38.690 --> 00:04:47.480
+Rack: When you say, that, you know, what is the job of the, job of the user? It's not… if you only mention things like.
+
+28
+00:04:47.630 --> 00:04:57.919
+Rack: that, hey, I'm getting an inbox, assistant involved. And you might say that, let's use an LLM to kind of generate the replies. That is not exactly the job here.
+
+29
+00:04:58.130 --> 00:05:13.020
+Rack: The talk would be a bit more if I did things like, a user might say, I have 30 emails sitting in my email box. I want, assistance, help to reply or formally to the emails where reply is required. Using
+
+30
+00:05:13.030 --> 00:05:26.180
+Rack: The instructions or using a context which is relevant to the underlying, and then not going or not replying something which is… which the assistant does not have access to, or which shouldn't be allowed.
+
+31
+00:05:26.250 --> 00:05:39.040
+Rack: That will form a letter kind of job, to be done, rather than it being at a very long table. So here, the email's assistance kind of… what it will know is that it will read.
+
+32
+00:05:39.040 --> 00:05:46.469
+Rack: It will then easel over it, it will have some actions to it, and then it will check or take your approval on it.
+
+33
+00:05:46.770 --> 00:05:57.270
+Rack: So in general, what you would want to kind of understand, with the mental model in general would be 5 things that's important to me, we'll delve into it. One is the context.
+
+34
+00:05:57.270 --> 00:06:07.779
+Rack: And you might have heard a lot about this context menu when we go into it. Context, instructions, model, then the tools, and what are the guardrails or boundaries looking like here?
+
+35
+00:06:10.100 --> 00:06:14.769
+Rack: Okay, so with this, we first, jump in the oil.
+
+36
+00:06:14.770 --> 00:06:30.320
+Rack: So for a PM, not a lot of technicalities is important, but what you would want to understand is that the model does not generate the entire output at the same time. It is token by loading generation. What does it mean? Token would be a… can be considered as the smallest
+
+37
+00:06:30.320 --> 00:06:44.209
+Rack: a word of fragment, which the model understands. If, say, for example, we have a case where the user is, there is an email in the user's inbox saying, is the new feature available for me?
+
+38
+00:06:44.220 --> 00:06:57.359
+Rack: this Friday. That's the question that the user has received. Now, when the LMM is kind of generating the response for it, it would be token by token, it will not be that it will go in one group. If it will begin with the first token as yes.
+
+39
+00:06:57.590 --> 00:07:14.010
+Rack: And then there would be a probability of what can be the second token as. It can be maybe, yes, you, no, sort of a thing. And this problem is, like, there's a probability of every token generation that's happening. You might have also heard the keyboard declaration.
+
+40
+00:07:14.010 --> 00:07:23.609
+Rack: So, like, nature is nothing but, essentially, there is, like, this prediction algorithm has, essentially, a variance to it.
+
+41
+00:07:23.710 --> 00:07:35.959
+Rack: So, if you… and this can be set by, you know, the data scientists or the engineers, but what you would want to do is that if you have a formal reply that you're doing, maybe you would want to set the variance for lower end.
+
+42
+00:07:36.110 --> 00:07:48.829
+Rack: But if you are doing some… something sort of a brainstorming with the agent, where you want 10, 15 kind of different brainstorming ideas from it, maybe you would want to set the variance or the temperature of the…
+
+43
+00:07:48.830 --> 00:08:02.259
+Rack: But on a day-to-day, you might not use a lot of these things. It's just the very basics of, because when you're conversing with the developers, you might want to just understand the basics of the words. Permit might not, you know, jump directly,
+
+44
+00:08:02.400 --> 00:08:04.100
+Rack: With regards all the results.
+
+45
+00:08:04.980 --> 00:08:20.849
+Rack: Okay, so this was the basics of model what we need, that it's an open Rakuten generation, there is a variation, and there is a predictability, what will the next year be, so it's not always thought of being added. The second thing we come to is context, the context we look at.
+
+46
+00:08:20.940 --> 00:08:27.079
+Rack: So, it's nothing but what information tells the model has access to.
+
+47
+00:08:27.280 --> 00:08:37.009
+Rack: So it would be same maybe for the email example, right? The input box of the user would be one information source that the model has access to.
+
+48
+00:08:37.130 --> 00:08:49.579
+Rack: It could also be a couple of documentations that we have given out of the box, which is required for the agent to kind of reply or to obtain. So this would form your context window.
+
+49
+00:08:49.580 --> 00:09:02.850
+Rack: And what we want to do is similar to our memory, where we can keep in the working set of our memory, right? Not every information, right? Similarly, even the agent would have a limited context awareness window.
+
+50
+00:09:02.850 --> 00:09:10.960
+Rack: So what you would want to do is, you would want to see what do you want to keep into it, maybe the message that you have received directly from the user.
+
+51
+00:09:10.960 --> 00:09:25.259
+Rack: At this moment, say, who I… who will… will I get the access on Friday or not? You want to keep it as is for VATIM, in your context window. But things like maybe older conversation with the same tenant or same user that you would have had in the past.
+
+52
+00:09:25.490 --> 00:09:37.310
+Rack: Maybe that you want to just summarize and keep it in a compressed form, because that might not be that relevant to the email that you have received, or the conversation that's happening right now. And similarly, the third thing would be retreat.
+
+53
+00:09:37.310 --> 00:09:50.640
+Rack: Because you know, you have a limited capacity in the context window. You cannot keep everything there. There might be some things that you could only retrieve case-on-case basis, depending on what input or what portion of query you're using.
+
+54
+00:09:50.670 --> 00:10:06.130
+Rack: So these are the three, like, because this becomes important because, when you are writing your PRD for an AI kind of feature, you would want to kind of make sure of what does, what access of, information does your agent will have.
+
+55
+00:10:06.130 --> 00:10:13.550
+Rack: What will it directly have? What should I delete it to be? What's the information that it should respond from?
+
+56
+00:10:14.440 --> 00:10:36.499
+Rack: That's a doubt. So, does, like, output also, like, it has a separate context window, like, input, input, as you mentioned, it has a separate context window comprises of whatever input we are inputting in documents and all. So, same goes for the output also, right? So, usually context window is closed in and out and around here. But there would be something, some portion of it.
+
+57
+00:10:36.500 --> 00:10:49.230
+Rack: That's reserved for the output. Say, if you have around 16,000 opens, maybe 10,000 is reserved for the output, and then the rest of it will fall in. But it's… it would be, like, there doesn't have to be 4, 7, 8.
+
+58
+00:10:49.910 --> 00:11:07.379
+Rack: Okay, then, now we have understood, you know, context window of it, and we have understood basics, like, model part of it. Before we get into other portions of the five, kind of, models, the parts of the model, what we want to understand is that, at the end of the day, as a PA,
+
+59
+00:11:07.380 --> 00:11:21.849
+Rack: how good your requirement is actually helps you, test and evaluate your product later. So, rather than saying, I want the email assistant to give me an accurate reply, which is very vague in itself.
+
+60
+00:11:21.850 --> 00:11:38.370
+Rack: You would ideally want to define it to the code, which… which is similar to maybe when you're giving prompts as well, right? Or instructions as well. You've been already, taught this, or I think there was one session at handled for you folks, where the prompts need to be detailed, rather than just saying, this is what I want to do.
+
+61
+00:11:38.370 --> 00:11:49.220
+Rack: So here, you, as an acceptance by maker, you would want to put maybe job. Like, what do you want to do? Prepare a supported reply. Supported here means that the reply should be supported with evidence.
+
+62
+00:11:49.220 --> 00:11:57.560
+Rack: Essentially. Evidence? Evidence is nothing but against your context. So what evidence to have to say that this is correct, or this is not correct?
+
+63
+00:11:57.560 --> 00:12:15.779
+Rack: Then boundary, again, this is similar to cartrid, what it can, what it cannot do. So, maybe we want the assistant to draft a reply for us, but we don't want it to reply directly, because then it becomes an inclusive action, and we are not sure if we trust the agent enough to, you know, to reply on our behalf.
+
+64
+00:12:15.780 --> 00:12:24.790
+Rack: So maybe we want to approval before reply. And then, what is the success of your agent as a business? so you would want to see…
+
+65
+00:12:24.800 --> 00:12:37.929
+Rack: something in the evidence window is missing, then how does it handle? So here, PM ownership compete at initial agreeing on priorities. What is the success? What is the outcome of the, patient?
+
+66
+00:12:39.070 --> 00:12:50.919
+Rack: Then we come to URL, and this also is a very heavy use term. We kind of understood 3 ways you can, you know, keep your markets, right? You can keep it, you can compare it, you can retrieve it.
+
+67
+00:12:50.920 --> 00:13:00.989
+Rack: The third part of it, which is retrieve, one of the patterns there is RAT, which is Retrieval Augmented regeneration. It's nothing but a way of retrieving the information on the go.
+
+68
+00:13:00.990 --> 00:13:09.409
+Rack: So, for example, the same example we're mitigating with, where email is, hey, do I, do I get access to this feature online now, or, like, on the front end?
+
+69
+00:13:09.620 --> 00:13:18.030
+Rack: And maybe I already have some information, some announcement, which is there in my context window, which says, feature was live on Friday.
+
+70
+00:13:18.130 --> 00:13:28.690
+Rack: By that logic, my agent might think that, oh, this, this, you know, this, feature would then be okay for the customer to get on Friday.
+
+71
+00:13:28.750 --> 00:13:41.069
+Rack: But because the customer's account was, say, in a… and then it kind of, you know, got to understand through Rack through retreading another document.
+
+72
+00:13:41.200 --> 00:13:49.080
+Rack: that the Friday is, Friday kind of launch is only for the pilot accounts. It's only for the accounts maybe in the beta program.
+
+73
+00:13:49.570 --> 00:14:06.979
+Rack: And then, it kind of had to understand that the account that user has asked the question from, it's not in the beta account, right? So, what has happened here is that the info… from just the first context awareness window, it might have understood that, okay, we'll get the feature on Friday.
+
+74
+00:14:06.980 --> 00:14:13.250
+Rack: But by actually getting, like, additional evidence to it, it's actually a very wrong reply kit.
+
+75
+00:14:13.250 --> 00:14:21.070
+Rack: Okay, so hence, it becomes important that we, even if we can't have everything in the window, we know what things to retrieve.
+
+76
+00:14:21.170 --> 00:14:29.549
+Rack: And get from, so that the answer that we are giving is supported, by the evidence, and is more trustworthy.
+
+77
+00:14:30.550 --> 00:14:36.739
+Rack: So, so here, policy P1 is essentially what the RAM is kind of giving us from the…
+
+78
+00:14:37.260 --> 00:14:39.830
+Rack: Oh, look, you know, when we are kind of at you.
+
+79
+00:14:40.390 --> 00:14:45.539
+Rack: So, this is a bit of integrity to it, but how do you kind of retreat
+
+80
+00:14:45.650 --> 00:14:55.349
+Rack: the information, right? You would search for it. So there would be a keyword matching that is happening, which is exact match. So you might want to do exact match for certain things.
+
+81
+00:14:55.350 --> 00:15:11.860
+Rack: Like, if the account of the user, you want to find information on the account of the user from some customer documentation, then you would want to know the exact matching for the user's account. Vector here is nothing but… you can consider it as a n-dimensional auto-vector.
+
+82
+00:15:12.060 --> 00:15:17.190
+Rack: Where each document that you have is kind of stored in numbers.
+
+83
+00:15:17.400 --> 00:15:20.900
+Rack: So, say, a keyword like yellow.
+
+84
+00:15:21.000 --> 00:15:33.879
+Rack: might also associate with cold plate, might also associate with, maybe a similar world than blue, right? Because it can be a color, it can be a… so this is how, in a n-dimensional kind of space.
+
+85
+00:15:34.080 --> 00:15:42.320
+Rack: your every, row of document or information that you have will be saved as a number. It would be an n-dimensional number.
+
+86
+00:15:42.460 --> 00:15:58.189
+Rack: And now, what's happening is, that's the embedding process of it. But what you would want to do is, say, user has asked in his email that I want to get early access on Friday. So, when it's getting matched in that n-dimensional vector, getting early matches with pilot
+
+87
+00:15:58.340 --> 00:15:59.270
+Rack: Access.
+
+88
+00:15:59.480 --> 00:16:11.869
+Rack: So, essentially, it's because it's near, right? So that's how we get to know pilot access is the documentation, maybe, or the, like, relevance, window that we want to kind of, bring in, and hybrid approach is very useful.
+
+89
+00:16:12.010 --> 00:16:27.309
+Rack: So, yeah, that's, a click on how does it search? But again, this is more for your own understanding. It does it, kind of go into… like, you would not be the one deciding, maybe, the vector or keyword, but you would have to kind of brainstorm on what do you need exact matching to.
+
+90
+00:16:27.310 --> 00:16:34.310
+Rack: And maybe what, might be given by the user, not in an exact way, before trying to match it a bit.
+
+91
+00:16:34.360 --> 00:16:41.809
+Rack: Yeah, go ahead. Yeah, can you elaborate a bit more on the n-dimensional part you, highlighted, the n-dimensional number specifically?
+
+92
+00:16:42.410 --> 00:16:46.629
+Rack: So, n-dimensional is nothing but, you know, you understand XYZ, right?
+
+93
+00:16:46.830 --> 00:16:57.760
+Rack: So, it's just, like, n dimensions for it. So, n is, like, an nth number. Don't want to go into depth of it, we'll share the package as well, but what I want to say is that
+
+94
+00:16:58.600 --> 00:17:03.940
+Rack: To define a word, you might have different, properties of it.
+
+95
+00:17:04.130 --> 00:17:08.839
+Rack: Right? We are seeing Kiru. It can be associated with different…
+
+96
+00:17:08.880 --> 00:17:24.799
+Rack: access to it. Maybe it can be a song, it can be… and I… we can, like, because it's more of an imagined thing, then. But it can be a part of… it can be maybe a cat's name, sort of those things. So, a unique number is used to
+
+97
+00:17:25.140 --> 00:17:32.230
+Rack: Who kind of, represent a block of, document portion.
+
+98
+00:17:32.410 --> 00:17:49.039
+Rack: So that when you… when our system is searching for it, it doesn't have to kind of traverse through all the documents, understand it. It will just match in this 10-dimensional change, XYZ, you have 667, right? And another word is matched with 665. So you will kind of see…
+
+99
+00:17:49.040 --> 00:17:56.699
+Rack: In this form, what is the nearest 5-6 keywords or blogs with? That will go into your context width.
+
+100
+00:17:56.940 --> 00:18:12.629
+Rack: But this is more towards the functionality, something I don't think I've used it in my day-to-day, actually. But maybe a higher core PMI tools. Super tokenization, for example, let us say, get another some tokens, for other words.
+
+101
+00:18:12.910 --> 00:18:14.680
+Rack: No, this is empty.
+
+102
+00:18:15.370 --> 00:18:33.759
+Rack: Yeah, tokenization would be breaking it into tokens. Embedding is that, say, a longer document you have. You might break it into paragraphs. For simpler, and you can read a bit more in depth of it. From simple terms, you might break it into paragraphs, and that paragraph is represented as a number.
+
+103
+00:18:34.160 --> 00:18:41.329
+Rack: But, interesting. So… If any… because you're talking about tech storage.
+
+104
+00:18:41.930 --> 00:18:47.559
+Rack: Text and anything is going to be associated with anything else in different ways.
+
+105
+00:18:47.740 --> 00:18:51.940
+Rack: Now, let's say you've got a 10,000-page document.
+
+106
+00:18:52.130 --> 00:19:01.630
+Rack: All of these you can do. Now, if you want to retrieve in the context of the query that has been asked.
+
+107
+00:19:01.920 --> 00:19:06.249
+Rack: So the model, which is trying to predict the next token, that is open edge.
+
+108
+00:19:06.650 --> 00:19:12.629
+Rack: What you are now trying to do is, Whatever the user has said, The feeling of it.
+
+109
+00:19:13.060 --> 00:19:18.929
+Rack: what is the closest representation of each dimension that I will ask the model to follow?
+
+110
+00:19:19.130 --> 00:19:25.680
+Rack: And that is why it is closest to, you know, Rack and Search, it's about retrieving, that I'm changing the base
+
+111
+00:19:26.090 --> 00:19:40.520
+Rack: understanding of what you would have done by saying… so that is why the example given here is, see, when you say get in early is matching pilot access, right? So, you might not have, in your own policy document, it may be written as pilot access.
+
+112
+00:19:40.850 --> 00:19:49.390
+Rack: And whereas, wherever you're talking about it, and when the agent is reasoning, the agent is thinking that, okay, do I need to think about and talk about whether this
+
+113
+00:19:49.490 --> 00:20:02.479
+Rack: person is going to get this access before RTMS, or get it working, right? It's got nothing to do with piloting. Now, I have to figure out whether this and this are, in a way, related to the firm planning.
+
+114
+00:20:02.890 --> 00:20:05.970
+Rack: Because otherwise, so let's say, you could literally say.
+
+115
+00:20:06.220 --> 00:20:11.190
+Rack: Draft versus send versus create versus build and email.
+
+116
+00:20:11.770 --> 00:20:26.470
+Rack: Right? But when I find an email, and when you write any of these words, each of those words, we understand that if it follows with an email, this is what I want, right, in some way. But if there is build, then I might want to think about this, is there some other construction I want?
+
+117
+00:20:26.640 --> 00:20:27.540
+Rack: That…
+
+118
+00:20:27.990 --> 00:20:40.790
+Rack: Extraction and creating that entire pipeline is essentially vectorization, right? Or figuring out how do I embed the features. So, let's say we build personalization. As a simple example is how to figure out how do you write details.
+
+119
+00:20:41.540 --> 00:20:48.169
+Rack: Now I have many thousands of payments. Trying to figure out Consistent patterns and extract that.
+
+120
+00:20:48.930 --> 00:21:00.840
+Rack: So before, when I am trying to extract that as a feature, I need to first understand what is the grouping, what does everything look the same, where can I collapse multiple things into one?
+
+121
+00:21:01.040 --> 00:21:03.070
+Rack: That is where part of this comes in.
+
+122
+00:21:04.000 --> 00:21:14.839
+Rack: And this will become important, like, you can keep it at a very simple level, and you can just keep asking the agent, saying, okay, when you do your eval, say, again, become extremely important, because when you say… just asking.
+
+123
+00:21:15.340 --> 00:21:22.619
+Rack: Yes. So, the context of a document is basically used to reduce the dimensions, correct.
+
+124
+00:21:23.240 --> 00:21:33.679
+Rack: Depends. Depends. If that's your core, that it helps you in that way, yes. My understanding of it is that, let's say we use the word color, yellow.
+
+125
+00:21:33.740 --> 00:21:34.690
+Rack: So…
+
+126
+00:21:34.710 --> 00:21:53.640
+Rack: If we are uploading, let's say, a car manual, right? So, the context now, the dimension will not include cold plate. It would be reduced to something very specific to us, right? So, this manual is basically reducing the dimensions. Correct. But that's because you've said school search is this manual.
+
+127
+00:21:53.640 --> 00:22:03.849
+Rack: Now, in that manual also, it could be about your yellow, you know, fluid, it could be about yellowing of your window pane, whatever it is. Still, it is still gray-blown.
+
+128
+00:22:03.950 --> 00:22:23.330
+Rack: So, the thing is, when you do search, if I start doing lexical search, which is yellow to yellow, find every single instance of yellow, that's called lexical search. Then you do semantic search. I try to figure out the meanings of all of that, right? And the vector will try to figure out what are the closest associated terms with yellow once I detects this entire part.
+
+129
+00:22:23.480 --> 00:22:36.150
+Rack: Right, so I don't… because I don't have time to go line by line by line, every single yellow, what might match, what might not match, and either there, you will have equal probabilities where you might have another 100 search results. Right, so that, what do you extract?
+
+130
+00:22:36.330 --> 00:22:50.489
+Rack: So now, I want to figure out with this situation, this situation, then this situation, when I combine all of these three, only 3 matches most likely are built. Then you replace them. So if you have all of that embedded, then you can do it in real time. Otherwise, you will just, like.
+
+131
+00:22:50.610 --> 00:22:55.070
+Rack: have to wait a long, long time. We had, like, now we've got, like, multi-billion
+
+132
+00:22:55.280 --> 00:22:59.960
+Rack: token context with those, so we don't have feelings, ask Robert.
+
+133
+00:23:00.210 --> 00:23:01.750
+Rack: would feel eligibility.
+
+134
+00:23:01.880 --> 00:23:11.449
+Rack: to go mad, like, you put your company's database on GP-3, nothing will work. Like, you will just wait endlessly, you're like, why am I wasting time with LLX?
+
+135
+00:23:13.610 --> 00:23:28.390
+Rack: Okay, so moving on to the next one. So, essentially, in the same, you know, kind of the policy P1 we had literally looked at. But then there is this information if the customer's account is present in the pilot program or not.
+
+136
+00:23:28.410 --> 00:23:44.829
+Rack: For those kind of, you know, queries, you might need a tool application as well. So, for example, this kind of information was sitting in a customer DB, which kind of mapped with this account what are the, you know, capabilities of this account.
+
+137
+00:23:44.830 --> 00:23:59.970
+Rack: One being that it's a pilot program or not. So, the, like, the other aspect of it is that you will retrieve information, maybe from documents. The other thing would be that maybe you're using tools to also bring information within your, purchase.
+
+138
+00:24:00.350 --> 00:24:14.619
+Rack: So, yeah, so essentially tool will perform operations for it, for you, and you, as a PM, have to define what all tools will your agent have access to. So, maybe for the email agent, email is one tool that the agent will have access.
+
+139
+00:24:14.920 --> 00:24:24.319
+Rack: So that it can draft replies. Or another tool might be, that there is, you know, an HR web where all the documentation sits.
+
+140
+00:24:24.320 --> 00:24:37.630
+Rack: So maybe that, that HR web kind of portal is another tool that the, that the assistant has access to. So those tool definitions and what are the stopping conditions? So, maybe you would want to say that?
+
+141
+00:24:37.700 --> 00:24:55.549
+Rack: And Outlook as a… you only want to draft the right, but you don't want to give… just send a permission to your agent right away. So all those, conditions for the tool, and if something goes AWI, then what is the recovery of it, is what will kind of go into your, definition part.
+
+142
+00:24:57.950 --> 00:24:58.900
+Rack: Okay.
+
+143
+00:24:59.110 --> 00:25:03.170
+Rack: So…
+
+144
+00:25:06.820 --> 00:25:26.230
+Rack: Okay, so then we come to, I think, fine-tuning as people. So, what you will understand is that there might be different type of triggers happening for you. Maybe, well, you know, given all these instructions, you have the model, you have the context window, you have to find it, you will find the… but still, the response that you're getting is not that great.
+
+145
+00:25:26.230 --> 00:25:28.959
+Rack: There might be some, different failures of it.
+
+146
+00:25:28.960 --> 00:25:44.849
+Rack: So there is also a possibility that on the base model that you are already getting, you can train it a bit more fine-tuned, in a fine-tuned way, on additional database, on additional kind of information that you have, so that it's better performing.
+
+147
+00:25:44.850 --> 00:25:52.969
+Rack: But the idea of this, kind of slide is that you don't have to jump to find me. First.
+
+148
+00:25:52.970 --> 00:25:55.819
+Rack: As a PM, you should understand why the failure is a case.
+
+149
+00:25:55.850 --> 00:26:12.249
+Rack: Was it that every time, the email was responding, it was not giving, maybe, you know, who was the sender? And that can be an instruction problem. If my instruction is improved to a way that… where I say that with every response.
+
+150
+00:26:12.250 --> 00:26:24.419
+Rack: you should give who's on behalf of which sender are you sending this? That can be an instruction problem. It could also be in the retrieval, like, access that we have. We had given access to the whole policies.
+
+151
+00:26:24.420 --> 00:26:43.489
+Rack: And it did say that maybe now, even apart from pilot program, everyone has access on a Friday, for the feature. But the… but the agent only kind of accessed the policies which were the older policies. So it could also be a retrieval problem. So, essentially, what we are saying here is that if you want to
+
+152
+00:26:43.490 --> 00:27:02.679
+Rack: decide whether to fine-tune your model or not from the race model. You first have to decide if the failure is actually a tuning problem, or it can be something in the other portions of your, kind of, pattern, like, your entire business. What kind of problems then would be specifically solved early by teaming?
+
+153
+00:27:03.300 --> 00:27:11.040
+Rack: So, say, for example, if the bucketization of your email is problematic, say,
+
+154
+00:27:11.830 --> 00:27:26.199
+Rack: So there can be, email which is asking you for a query on, access issues. There can be email which is, maybe, you know, thanking you for something. There can be emails which would be complaints.
+
+155
+00:27:26.200 --> 00:27:46.890
+Rack: that, hey, this is not working for me, and not in exist, it should be something else. So that bucketization is what generally your model will do, so that you respond to that in a certain way. If the bucketization itself is a problem, then maybe you would want to give it more data to trade itself, right? Because the base model might be considering some
+
+156
+00:27:46.890 --> 00:27:51.820
+Rack: Email for certain situations at… it might be labeling it at certain reset.
+
+157
+00:27:51.820 --> 00:28:10.629
+Rack: But in our context of, say, my company, right, it might be that this is understood in a different way, so I might want to kind of train it locally as well. That is just a follow-up question to this. At what point do I say, I want to give it more context, like, within the context window? At what point should I say lag? And at what point should I say, no, I'm going to go with the
+
+158
+00:28:10.800 --> 00:28:12.380
+Rack: They call me that code.
+
+159
+00:28:12.700 --> 00:28:31.299
+Rack: So, essentially, lag is nothing but you are giving context only, yeah. But, say, if your context is ever-changing, say the policies that you have, right, or there is legal documentation, there is something that can, constantly change for you, then you don't want the context window to be static. So, maybe you are giving context in a way that
+
+160
+00:28:31.300 --> 00:28:50.989
+Rack: the email that you have received could be my context. But then, if it's an ever-changing kind of, kind of information, that is one. The other thing is, if the size of the information is very large, right? You can't see anything in the working set. So that will go into your retrieval kind of thing. And what was the third one, sir? And then we're gonna fight you.
+
+161
+00:28:51.180 --> 00:29:09.930
+Rack: So, if, the issues, say, the issue is more about bucketization rather than the context, right? It had all the context, that it is a problem, like, it got the understanding that it is an access problem, rather than anything else, but still the model kind of did not make it to the access problem, it bucketized it in the wrong.
+
+162
+00:29:09.930 --> 00:29:15.820
+Rack: But usually, what… and I've heard is, like, from my other engineer, friends as well, That's…
+
+163
+00:29:15.820 --> 00:29:33.169
+Rack: No, usually we don't jump into fine-tuning right away, because, base models are also important, right? So, it can be that, things go stale, or you want. So, we see if it's required or not, otherwise we won't go into fine-tuning that much. Sorry, let me give you an example.
+
+164
+00:29:33.930 --> 00:29:36.850
+Rack: So, you were writing these portals.
+
+165
+00:29:37.340 --> 00:29:38.820
+Rack: Transporters.
+
+166
+00:29:39.020 --> 00:29:42.779
+Rack: Even until, like, one year ago. The problem is that sales were generated.
+
+167
+00:29:43.510 --> 00:29:47.950
+Rack: If it is a standard image, which everybody wants, very easily.
+
+168
+00:29:48.300 --> 00:29:50.779
+Rack: Let's say you want to generate your own image.
+
+169
+00:29:51.140 --> 00:29:52.100
+Rack: Very common.
+
+170
+00:29:52.380 --> 00:29:55.469
+Rack: Very hard. You can say, you can add on fire.
+
+171
+00:29:55.730 --> 00:30:07.100
+Rack: Right? Which is your own photograph, and you can say, put me in front of the iPhone 2, because iPhone hour is well known. Now, you have given the photo, and it's just one person. I am trying to
+
+172
+00:30:07.220 --> 00:30:08.850
+Rack: Through the entire building.
+
+173
+00:30:09.030 --> 00:30:09.990
+Rack: Still.
+
+174
+00:30:10.340 --> 00:30:16.730
+Rack: Now, let's say you start to do this for… you say, now I want to create ads which are…
+
+175
+00:30:17.390 --> 00:30:18.569
+Rack: Which have truth.
+
+176
+00:30:20.130 --> 00:30:24.720
+Rack: None of this one. You could… because your model's weights
+
+177
+00:30:24.830 --> 00:30:43.580
+Rack: Whenever it has captured images of people and drained on, it doesn't a beautiful. It may have some Asian representation. So that's why a lot of times in the early English models, whenever you try to rerun, it will eventually become like a, you know, generic face. One generation Instagram.
+
+178
+00:30:43.720 --> 00:30:48.299
+Rack: So then you're asking the Laura, Kind of, like, a fine-tuning.
+
+179
+00:30:48.650 --> 00:30:53.840
+Rack: You would provide your set of 30, 40, 80 images from every angle.
+
+180
+00:30:54.310 --> 00:31:04.339
+Rack: And it is an image model which… whose weights can be trained and changed. Inherent model changes by injecting your images in.
+
+181
+00:31:04.610 --> 00:31:07.920
+Rack: Now, this is a new water alternative, which is a fine loop.
+
+182
+00:31:08.150 --> 00:31:10.260
+Rack: Which is trained on your index.
+
+183
+00:31:10.930 --> 00:31:22.179
+Rack: So it has lost its base properties, and it has given the properties which are of your characteristics. Now you use it and deploy it, it will generate your whatever problem.
+
+184
+00:31:22.370 --> 00:31:28.050
+Rack: This is very important. So, one of the easiest ways to know is that if you've bought a very custom space.
+
+185
+00:31:28.700 --> 00:31:30.959
+Rack: And it is worth the investment.
+
+186
+00:31:31.340 --> 00:31:35.579
+Rack: It will cost you, in all of this training, it would cost to compute cost all of this.
+
+187
+00:31:36.310 --> 00:31:37.389
+Rack: Thanks, Wilton.
+
+188
+00:31:37.500 --> 00:31:50.190
+Rack: Because no generic model… the generic model's failure rates are not acceptable. So if you are, like, a math-throwing model, or let's say you are trying to find this Excel, in Excel, you know people do these kind of things.
+
+189
+00:31:50.490 --> 00:31:51.410
+Rack: Excuse me.
+
+190
+00:31:51.790 --> 00:32:00.769
+Rack: Then you might think, whether it's the most people are trying to do it, temporary profiles that are based on a lot of locals and still not be activated at all.
+
+191
+00:32:00.930 --> 00:32:10.799
+Rack: Excel, by definition, is very hard to find, hard-coded. Can I then just figure out, can I train a small language model, fine-tune it to all millions amounts?
+
+192
+00:32:10.920 --> 00:32:11.760
+Rack: this week.
+
+193
+00:32:11.870 --> 00:32:12.760
+Rack: That's cute.
+
+194
+00:32:12.970 --> 00:32:18.309
+Rack: So it's… generally, it's only worth when you have highly specialized AI resources.
+
+195
+00:32:22.140 --> 00:32:37.619
+Rack: Okay, so next we move to events or evaluation. So, essentially, as a PM, historically, all the products or features we were launching had a very deterministic output, right? Say, a couple of years back, I was working on a feature of merging videos.
+
+196
+00:32:37.620 --> 00:32:52.200
+Rack: So my success of it is very deterministic. If two PDFs are to be merged, and it's successfully getting merged. Maybe with some error cases where, you know, one is encrypted, so the result should be encrypted, and all those things, but it's still a deterministic output of yes or no, it was successful or not.
+
+197
+00:32:52.270 --> 00:33:00.609
+Rack: Now, what is happening is that because of your, features involving AI in the generation, kind of layers.
+
+198
+00:33:00.700 --> 00:33:09.550
+Rack: the result or the success of it has become probabilistic. Like, it's a, like, probability now. It's not a very deterministic kind of outcome.
+
+199
+00:33:09.580 --> 00:33:23.489
+Rack: then how do we go about it? So that's what we call evaluations or evals, in short, and, like, I think a lot would have heard of it as well. So what generally happens is that we will have a case. Case is nothing but, say, an example of
+
+200
+00:33:23.650 --> 00:33:40.280
+Rack: how… what type of emails am I getting? Maybe the same email, right? And then, that would be an example of the case. Then what I would do is that I would have a label to it, as if in these kind of situation, what am I expecting the agent to do?
+
+201
+00:33:40.470 --> 00:33:57.249
+Rack: Then there would be a trial layer, which I'm then giving this, case to my agent, and what it is actually generated, say, for the case that we had. I would want, the email to actually check with me that the user does not have access, how to reply.
+
+202
+00:33:57.320 --> 00:34:06.710
+Rack: But maybe it went ahead and it replied that you have the permission, you will get the access on a Friday. So then it kind of failed. So the trial is the second part, and then the leader is
+
+203
+00:34:06.780 --> 00:34:11.809
+Rack: Compare… comparison with these labeling, kind of, whatever your input was.
+
+204
+00:34:11.870 --> 00:34:24.079
+Rack: Did it match? Did it partially match? Did it fail? That would give you a story result to it. And a group of cases that you have is… which is kind of representative to the usual
+
+205
+00:34:24.100 --> 00:34:32.450
+Rack: set that you would receive is called a golden flag. So, that is also terminology that you would… So, essentially, evals is nothing but, what you will do is.
+
+206
+00:34:32.449 --> 00:34:44.499
+Rack: say, for example, right now, also, if I'm working on, user feedbacks coming in, and then kind of bucketizing it. What I'll do is that I'll have a folder set of representative user feedback that I'll
+
+207
+00:34:44.500 --> 00:34:52.990
+Rack: Maybe things like, hey, this is not working for me, maybe the, you know, the screen was black for me.
+
+208
+00:34:52.989 --> 00:35:05.800
+Rack: maybe I was not able to find what I was looking for, sort of a thing. I made a bucketization of representative kind of feedbacks that I'm getting, and then whatever, the model that I'm running on, I'll run it against these
+
+209
+00:35:05.800 --> 00:35:21.959
+Rack: set of, pollen set that I have, and check the comparison if it actually gave what I labored it as or not, for success or failure. And here, I think one, caveat is that usually you would also… you don't have to generate your own
+
+210
+00:35:21.960 --> 00:35:41.500
+Rack: cases, because they're meant to be already publicly available, kind of portal sets for you to use. Say, for email as well, there is a publicly available, kind of data set that… that is a data set of, I think, around 15,000, emails from your users. That's who can actually drain your, you can evaluate your portal.
+
+211
+00:35:41.580 --> 00:35:44.030
+Rack: So, that's essentially, as…
+
+212
+00:35:44.790 --> 00:35:59.860
+Rack: And a caveat here to understand is that, you know, you don't… you should ideally not average the success. Say, for example, in 100%… out of 100% of the cases, 95% you got a part… you got a successful match or a partial match.
+
+213
+00:35:59.910 --> 00:36:11.979
+Rack: So you might feel that, hey, this is great, right, and only 5% are failing. But out of those 5%, it can be that depending on, which, you know, which representative set it was.
+
+214
+00:36:11.980 --> 00:36:22.019
+Rack: And if these were the failures that we didn't want to do. Say, example, one failure could be that it ended up sending two emails to the user. Another failure could be it didn't send any email.
+
+215
+00:36:22.060 --> 00:36:25.689
+Rack: Another failure group could be it's send an email with wrong information.
+
+216
+00:36:25.710 --> 00:36:41.189
+Rack: So, out of these three failures, the third one is the one which breaks the trust and promise that we have made to the user. In that way, the third one is the one which will hold more value. So if in the 95%, the 5% failure is for the third one.
+
+217
+00:36:41.190 --> 00:36:59.839
+Rack: then it's not grateful, right? So, you want to kind of bucketize all your failures you should slice in groups, and then see, basically, you know, the frequency, the consequences that you have of different failures, which are the ones that you cannot compromise on, and which are the ones that is okay to still be in the layer where it fails. So, that's…
+
+218
+00:37:02.060 --> 00:37:09.609
+Rack: Okay, then we move to product metrics. So, essentially, we had some talk initially decided, right? Like, this is what I'm trying to do.
+
+219
+00:37:09.880 --> 00:37:25.249
+Rack: One of the part of product metrics would be the era that we have done, because that will help me understand the quality of my region. But at the end of the day, as a PM, you should only not look at the quality or the success of the model itself. You should actually see if
+
+220
+00:37:25.330 --> 00:37:39.990
+Rack: it helped the user reach the job that it was told to do. So maybe what we wanted was that if I got a draft response from the agent, I'm good with it, I set it with maybe minor changes. But if I, as a user, is changing everything that it's writing.
+
+221
+00:37:39.990 --> 00:37:50.019
+Rack: Then, though the model might have given all the correct information, everything, but still something is not ticking with me because my job was not completed, right? So, outcome… outcome here matters.
+
+222
+00:37:50.020 --> 00:38:06.520
+Rack: Then, other things like health metrics, you know, what was the latency of it, was a response so late that even if it was accurate, it… I waited for so long that I didn't want to kind of do it. So the weight, the accuracy of it. And then the fourth is how much cost? Maybe it's great.
+
+223
+00:38:06.520 --> 00:38:20.040
+Rack: But then the cost to the company could… should also be optimized, right? We cannot go, like, purpose there. So, that. And with this, I think the last type in the fundamentals, and we open a bit further questions later, like, after this.
+
+224
+00:38:20.040 --> 00:38:27.110
+Rack: Is that, now a new kind of, you know, program is coming with just forward deployment, deployed in Chios.
+
+225
+00:38:27.480 --> 00:38:36.360
+Rack: Directly, I've not worked with one. But what I've, in general, understood is that the PMs are the ones who will meet your requirements, priorities, and offerings.
+
+226
+00:38:36.360 --> 00:38:43.109
+Rack: FDs are the person who's going to that tenant or enterprises, and then deploying in their environment.
+
+227
+00:38:43.110 --> 00:38:58.669
+Rack: So if you kind of see issues in the… like, your model was great in the eval, it was great response. But within the field, when they actually deployed it, maybe there was some context that was very, nuanced to that company that didn't work.
+
+228
+00:38:58.670 --> 00:39:16.429
+Rack: which needs to be kind of given back as a feedback to the model, or the PM, or the requirements. So that sort of things. That is what an FT kind of helps in, which is conversing with the, like, helping it get deployed, and then bring the feedback back to the, yeah, yeah.
+
+229
+00:39:16.520 --> 00:39:27.220
+Rack: So yeah, this makes the very fundamentals of it, but there's a long, take-home. Not assignment, but a long kind of need that Arth has prepared for all of the kind of…
+
+230
+00:39:27.220 --> 00:39:39.949
+Rack: spend your Sunday on, so we'll share that. But after this, we do have a portion, while I'll take a pause here for more questions, because I think this was… I'm not sure, like, everyone, where are they at?
+
+231
+00:39:40.140 --> 00:39:55.820
+Rack: So, like, be frag and keep on us. So, within Microsoft, other engineers that are visited, like, how is it different from client sensors or customer success, like, this communicated by the requirements?
+
+232
+00:39:55.990 --> 00:39:58.180
+Rack: So, next to…
+
+233
+00:39:58.420 --> 00:40:17.319
+Rack: So, are they allowed to make any changes, within that circle? Are they just, offering? So, so I think there is a department that's forming, but if you know more about it. There's, something called another AI company.
+
+234
+00:40:17.880 --> 00:40:20.299
+Rack: So, basically, returning to organization.
+
+235
+00:40:20.880 --> 00:40:22.929
+Rack: You better see your very best to do.
+
+236
+00:40:23.050 --> 00:40:25.889
+Rack: That is essentially based on this entire model of
+
+237
+00:40:26.000 --> 00:40:29.850
+Rack: you know, working people, but that's the appropriate next week.
+
+238
+00:40:30.720 --> 00:40:36.460
+Rack: They don't really… horizontal capabilities at Microsoft.
+
+239
+00:40:37.020 --> 00:40:39.220
+Rack: Because Microsoft is so big.
+
+240
+00:40:39.490 --> 00:40:45.579
+Rack: So if I know my secret developing co-pilot features, that's going to be the revenue.
+
+241
+00:40:45.980 --> 00:40:51.159
+Rack: Now what happens is you, for today, Microsoft is creating 5,000 agents per month.
+
+242
+00:40:51.360 --> 00:40:53.149
+Rack: And these are just part agents.
+
+243
+00:40:53.470 --> 00:41:05.219
+Rack: Those may or may not be useful if you're a customer. Now, you go inside a Fortune 500 company, like what Bonsai was talking about there, right? You might need to fine-tune something. Now, Microsoft also has about 50 or
+
+244
+00:41:05.630 --> 00:41:08.910
+Rack: None of them are state-of-the-art, but close to state-of-the-art models.
+
+245
+00:41:09.150 --> 00:41:18.760
+Rack: Now, you were saying, okay, I have this. Let's say you're an artist. No artist will say, throughout this story, I've got these 13 other things, which are highly custom. This is what I need to read, this is what I…
+
+246
+00:41:19.130 --> 00:41:21.690
+Rack: Now, forwarded by the team here will figure out
+
+247
+00:41:21.870 --> 00:41:27.900
+Rack: Whether one of these models, the standard, default, whatever Microsoft outputs, may or may not work for any of that.
+
+248
+00:41:28.540 --> 00:41:32.189
+Rack: You may need to fine-tune it of this pipeline. They will go and fine-tune.
+
+249
+00:41:32.520 --> 00:41:48.120
+Rack: sit with them. They will go and figure out, these are the ways in which you can effectively Rack. This is how I will build a repository for you. It's like, no, whatever, if my current TV structure is not good enough, then inside Azure, I need to spin up these many things in this way.
+
+250
+00:41:48.350 --> 00:41:55.430
+Rack: So they are the ones who will figure out how to connect all the WorkTheS to ensure that that customer is successful.
+
+251
+00:41:56.050 --> 00:41:59.850
+Rack: So it is the same. For example, OpenAI will develop Astro.
+
+252
+00:42:00.080 --> 00:42:09.969
+Rack: Now, their own core alignment, their own product team, their NID will focus on how to build that model, because it should have what context, or what do they do, what do we measured on.
+
+253
+00:42:10.240 --> 00:42:19.269
+Rack: But now, to deploy Astra into whatever, like, any company you can think of, if it's, like, a multi-billion dollar contract with any defective.
+
+254
+00:42:19.660 --> 00:42:27.730
+Rack: OpenAI will not have that capability on its own, therefore. So that is how FT keeps on and is gaining traction.
+
+255
+00:42:28.590 --> 00:42:45.819
+Rack: Previously, you could always have said it's customer success, it was, you know, sales enablement, talks enablement. The problem with this is it is so deeply technical that you would need someone who is a great engineer, who's a great architect, and who has that VM capability as well. So you have to invent this before.
+
+256
+00:42:45.940 --> 00:42:51.559
+Rack: And that is, like, a mix of your food enough at home. You cannot feel, like, the heat headache.
+
+257
+00:42:51.710 --> 00:42:56.270
+Rack: But you are super in the top 10% of all of them. That is a good idea.
+
+258
+00:42:57.030 --> 00:43:05.400
+Rack: So the goal is basically that you reduce an active value for, you know, customer bespoke leads. Correct. And you better prove it. Like, first of all, it uses…
+
+259
+00:43:05.480 --> 00:43:16.840
+Rack: great, but you better prove it, because then they will go to somewhere else if they're better, right? Because none of these guys know. We talk about all this, and then they're like, what do you mean? I don't have the time to understand all these fine feelings?
+
+260
+00:43:16.840 --> 00:43:29.090
+Rack: It should work, and a lot of these guys are still on-prem, like, forget Cloud. A lot of these are on-prem. What will you do? Like, what server Mac? What will you do with the setup? It's crazy, like, you need to understand all of this of how to make it work.
+
+261
+00:43:29.300 --> 00:43:42.909
+Rack: And they might say, my… none of my data should leave any of these machines. It is highly sensitive, like, why? So say that? How to address any of this? Even if you have, like, you know, sovereign clouds and private clouds and all that, I don't trust, it should not go out of this machine.
+
+262
+00:43:43.220 --> 00:43:52.109
+Rack: Then, outboard you. Then you have federated. Federated clothing is the next level of complexity. Again, NFT will figure out how to enable that.
+
+263
+00:43:55.650 --> 00:44:05.790
+Rack: Yeah, so suppose we are having a base model, and we binding date, and we want the efficiency of that model to be 100%, but the model is showing 95%, so what can be the possible reason why,
+
+264
+00:44:05.790 --> 00:44:21.900
+Rack: lagging efficiency. I like that you said 100% efficiency. 100% efficiency. For example, we want the accurate prediction and all. We want 100% outcome, but the model is actually showing 95% of what we want. So, what can be the possible reasons why it is showing 5% lag?
+
+265
+00:44:22.280 --> 00:44:39.779
+Rack: So that is not efficient, but that is essentially the game. You're right. Very interesting input. Like, it might find what you said is your, adherence to outcome, and that is why the stronger your equals, the better you will know where you fit.
+
+266
+00:44:42.160 --> 00:44:49.790
+Rack: Yeah, there could be any number of either. I think it depends a lot on case to case as well. So I'm just looking at 5 cases.
+
+267
+00:44:50.690 --> 00:45:03.599
+Rack: you know, give some examples. So, sometimes, you know, it can also be that you have trained your model on a golden set, because we're expecting certain inputs from the user. Say, right now, I'm running a map on users.
+
+268
+00:45:03.600 --> 00:45:12.100
+Rack: feedback that is coming our way. And we might have things like, hey, SURH is not working, or some similar, like, words that
+
+269
+00:45:12.150 --> 00:45:28.220
+Rack: I've trained my modules on, or I've kind of done their eval. But it can happen, the users say it in a way that is, even as a person, for me to interpret what they need, what they need. Might be difficult, right? They can say that.
+
+270
+00:45:28.270 --> 00:45:35.030
+Rack: His SURH gave me results, but the, and this is still deterministic, but it can be something like,
+
+271
+00:45:35.130 --> 00:45:36.559
+Rack: Maybe the third…
+
+272
+00:45:36.720 --> 00:45:44.170
+Rack: result was Piri, I was looking for Word. So, for my model or me, Word would be a file.
+
+273
+00:45:44.270 --> 00:46:00.140
+Rack: And I didn't understand what was, like, how do I monetize it now? Is it that they didn't find the file? Was it that the, filters didn't work for them, and hence… or was it that the file type was good, but they were looking for some other filter? So, even certain queries from the users are so…
+
+274
+00:46:00.250 --> 00:46:09.080
+Rack: vague sometimes, that first of all, 100% marketization won't work, because we as users also won't be able to marketize it. Some of them, we also say unknown.
+
+275
+00:46:09.430 --> 00:46:29.259
+Rack: Right, so… so those kind of buckets can arise that it can be that our initial quotas set didn't represent all the queries. Maybe I had given it one month worth of data, but there might be something that came later on which was not in the representative eval set, but it can be something that came later on that we didn't test our
+
+276
+00:46:29.310 --> 00:46:33.969
+Rack: system, etc. But it will depend, yes, on case, like, one or another business.
+
+277
+00:46:34.040 --> 00:46:40.340
+Rack: But yeah, go ahead. From what I understand, this forward deployed engineering role is the intersection of both tech and product.
+
+278
+00:46:40.340 --> 00:46:58.800
+Rack: So, XR mentioned that, the engineer would be working with some enterprise and trying to integrate whatever Microsoft has written through that enterprise. What is stopping Microsoft from having this role back home itself? Like, FDs, like, why is there a separate product code and a tech fit in?
+
+279
+00:46:58.950 --> 00:47:13.289
+Rack: So, Microsoft will have their own engineering score. It would be, like, it wouldn't be… I understand that, but, like, why is there a new role not created, which is the intersection of both these tech and product? I thought this office.
+
+280
+00:47:13.640 --> 00:47:26.179
+Rack: So I think, like, the change, what I'm anyways observing is maybe the terminologies would, you know, change, what we are calling it. But even these days, the PMs are… like, this… there's a flattening, or there's this…
+
+281
+00:47:26.180 --> 00:47:35.989
+Rack: you know, growth and designation that's slowly happening. So, if, as a PM as well, one month prior, or as a design folks as well, we are also raising PERs now.
+
+282
+00:47:36.330 --> 00:47:40.549
+Rack: So, I think it's already overlapping, it's just that the terminologies might…
+
+283
+00:47:40.720 --> 00:47:58.370
+Rack: change with, time. But even the PMs are becoming a lot more technical now, like, every small bug that used to be there, maybe, you know, color changes, accessibility issues, or anything like that, with the contrast ratio is not there. That's something that even the, like, PMs have started doing. The Figma designers have started doing.
+
+284
+00:47:58.370 --> 00:48:04.619
+Rack: So, all that's already happening on the board, but, yeah, in case… Yeah, too big.
+
+285
+00:48:05.130 --> 00:48:06.930
+Rack: It is to ensure success.
+
+286
+00:48:07.360 --> 00:48:14.360
+Rack: You spin up a new company because you don't want your good working habits and practices to corrupt what you're trying to do.
+
+287
+00:48:15.370 --> 00:48:16.350
+Rack: That…
+
+288
+00:48:16.640 --> 00:48:22.879
+Rack: So why even, let's say, if you're an IT company, it's very hard for you, and you've been very successful, it's very hard for you to be able to figure out.
+
+289
+00:48:23.200 --> 00:48:25.770
+Rack: Why do all the operators need to do that?
+
+290
+00:48:26.340 --> 00:48:42.889
+Rack: Because when you are an IC guy, all the leadership is failed with all of that success, you will short… like, you will just shoot down, you will reject a lot of things which seem radical, because you have what happened. Maybe a separate company allows you to separate out and not let that corruption get in.
+
+291
+00:48:43.410 --> 00:48:48.649
+Rack: And those guys are gonna sit with the customer. They're gonna really be deployed.
+
+292
+00:48:48.880 --> 00:48:58.179
+Rack: You can break that infrastructure, but let the leadership and their accountability and their, reporting remain directly out front. Otherwise.
+
+293
+00:48:58.480 --> 00:49:04.069
+Rack: the individual leadership of the individual teams will start to take over.
+
+294
+00:49:04.370 --> 00:49:12.310
+Rack: So generally, you do it through leadership days, and to ensure success afterward. That is…
+
+295
+00:49:12.460 --> 00:49:15.810
+Rack: This module works well there, cannot be implemented, like…
+
+296
+00:49:16.910 --> 00:49:21.859
+Rack: See, for all you know, the way I see it.
+
+297
+00:49:22.040 --> 00:49:25.280
+Rack: Every role, at best, will remain for both years.
+
+298
+00:49:26.020 --> 00:49:29.180
+Rack: It's a temporary transitional phase, that's my thing.
+
+299
+00:49:29.770 --> 00:49:37.399
+Rack: As soon as the tech, because it's so radical, and it's sucking on all capital from everywhere in the world.
+
+300
+00:49:37.780 --> 00:49:41.700
+Rack: There is nothing else left, and there is so much desperation. It's why you eat?
+
+301
+00:49:42.330 --> 00:49:46.779
+Rack: these messengers to figure out, get their… as soon as everybody is up to speed.
+
+302
+00:49:46.980 --> 00:50:00.319
+Rack: I don't think FTs will make sense, because even that native company, it's like, imagine you suddenly got radical Excel out, nobody was Excel. Microsoft had the FDP programs and investor programs, and a lot of people who train others on Excel and stuff.
+
+303
+00:50:01.110 --> 00:50:02.570
+Rack: It's similar.
+
+304
+00:50:02.830 --> 00:50:05.929
+Rack: As soon as everybody has some understanding.
+
+305
+00:50:06.070 --> 00:50:09.239
+Rack: now, franklyfish, it's gonna be…
+
+306
+00:50:10.110 --> 00:50:26.179
+Rack: not really needed. The guys at that company will know how to deploy elements. Then why do I need Microsoft and Microsoft will do it. I just… I can get my guys to deploy. We don't hire this, Microsoft 40 to Excel and Office and Labels. That's how I see it.
+
+307
+00:50:28.650 --> 00:50:32.790
+Rack: We'll take last question, and then we move to… or maybe to more.
+
+308
+00:50:33.310 --> 00:50:52.089
+Rack: Because we have your session as well, and that would be more thumb, at least. So, let's say I do good evals and my metrics are running on 12, but since the part of the system which is probably still enough, some errors happening by the list using it. In a deterministic app, I have my event logs.
+
+309
+00:50:52.380 --> 00:51:17.089
+Rack: Like, to go through. Here, the LLM is reading the user content, which I don't have access to, it gives an output which people have access to. So, if the basics remains the same, you'll have your qualitative, quantitative information coming up. You'll have a lot of feedback that you are asking users. So, for example, if my product is in beta, I have right now, like, say, 5 entry points to feedback, where I'm asking… even you'll see ChatGPT and everyone kind of responding with a thumbs up, thumbs down.
+
+310
+00:51:17.430 --> 00:51:20.589
+Rack: So, you would see those entry points everywhere to give…
+
+311
+00:51:20.590 --> 00:51:38.879
+Rack: consent to the logs that you have, and then providing feedback of what is working, what is not working for the user. So that's one way of getting that qualitative feedback, because in the end, you are not on the machine of the user, right? You don't know what failed for this. But if they are responding, in a certain way that, hey, relevance of search results was not great for me.
+
+312
+00:51:38.880 --> 00:51:54.149
+Rack: And then there are some logs that got to us, because of which we know this might not be a client-side issue, but a service-side issue sort of a thing. And then there is a pattern that we are observing, that 100 such people replied that relevance is not that great, and we found that maybe matching
+
+313
+00:51:54.240 --> 00:52:08.100
+Rack: is the issue, or maybe the freshness of it is the issue, because one month, two months prior, thing is… and hence, the data scientist or engineering needs to kind of, dial down things accordingly. So, the fundamentals are still the same. You get the qualitative feedback.
+
+314
+00:52:08.100 --> 00:52:17.890
+Rack: you will maybe need more entry points to force people to give it to you. You'll again do all those, you know, reach-out programs where you might be walking through the users, but you'll not
+
+315
+00:52:17.890 --> 00:52:20.330
+Rack: Get to know the individual issue.
+
+316
+00:52:20.340 --> 00:52:29.850
+Rack: Until you have those qualitative feedbacks coming in. And then, for the lower environments, and depending on if we have a frontier program of sorts, there would also be debugging tools that we have
+
+317
+00:52:29.860 --> 00:52:47.159
+Rack: already placed there, which would be giving us information, given the tenant or the property program folks would have agreed upon that. So all those mechanisms are there to understand, make a list of next action items, and then work towards it again. Maybe enrich your golden set a bit more, because
+
+318
+00:52:47.160 --> 00:52:52.729
+Rack: It didn't… it was not an exhaustive test early on, and now you are kind of increasing on… so, yeah.
+
+319
+00:52:53.930 --> 00:53:10.550
+Rack: So, when we are running these Q wells, how are we pursing, like, how are we evaluating, like, whether the output presented by the model, is it correct or not? Like, is it just a simple string matching, or is it, like, a powerful model, evaluating the
+
+320
+00:53:10.550 --> 00:53:16.669
+Rack: So, that would depend on what you are building. It would be, but the,
+
+321
+00:53:16.820 --> 00:53:22.999
+Rack: It could depend on what are the inputs or instructions you are giving. If, say, I'm only,
+
+322
+00:53:23.670 --> 00:53:41.860
+Rack: Say, it can be that my goal is that based on only the WorkATIM of the user, I want to bucketize the problems. That could be one. It could also be that I have the logs also as one block. I have the WorkVATIM as well. Then I have some sedimentary also coming in. Then all, based on all four I want to evaluate.
+
+323
+00:53:41.860 --> 00:53:57.629
+Rack: So, it can be what you are deciding for. But how would you evaluate is that maybe I, in the WorkATIM example, I gave it 100 WorkATIMs, I labeled it on my own, say this is a matching problem, according to, like, what I understand, what the engineering understands, as we have manually done it before.
+
+324
+00:53:57.720 --> 00:54:16.010
+Rack: And then, same thing you'll run with the model. Is it matching? Is it giving the matching as the answer, or is it giving, oh no, this is not matching, this is a client-side failure, which would be then make it incorrect. Or it says it is relevance, but it is not matching its freshness, then it might be a partial match. So, all those things, but yeah, same…
+
+325
+00:54:16.900 --> 00:54:22.480
+Rack: And one more thing, so, so, I remember there was a hand up. Okay, sure. And then we'll go…
+
+326
+00:54:23.430 --> 00:54:32.000
+Rack: So, for a lot of custom-built apps, like you show. They are built on top of using custom prompts. They are built on top of foundational mods.
+
+327
+00:54:32.120 --> 00:54:42.859
+Rack: the pace at which these foundational models have been developed is so good. Every time I want to migrate from my one model to the other, there's a lot of prompt migrations that is also in…
+
+328
+00:54:43.080 --> 00:54:45.329
+Rack: How is Microsoft solving them?
+
+329
+00:54:45.800 --> 00:54:52.549
+Rack: Lots and lots of regret testing. We migrate, like, all the time, we have to…
+
+330
+00:54:52.700 --> 00:54:55.580
+Rack: All the… every month, there will be a draw.
+
+331
+00:54:56.880 --> 00:54:59.649
+Rack: Perfect. There is no other way.
+
+332
+00:54:59.970 --> 00:55:08.720
+Rack: Okay, let me ask a question, very simple question. This is just 5 slides, I don't completely… 8%?
+
+333
+00:55:08.920 --> 00:55:13.510
+Rack: Okay, what do you think makes for a good PM today.
+
+334
+00:55:14.380 --> 00:55:16.659
+Rack: I don't think all of you, too. Yep.
+
+335
+00:55:17.090 --> 00:55:19.279
+Rack: point. What will the next group be in?
+
+336
+00:55:23.620 --> 00:55:26.859
+Rack: and PEP2 interactive.
+
+337
+00:55:27.130 --> 00:55:32.709
+Rack: Yeah, good. Understanding the user needs. Understanding needs. Okay.
+
+338
+00:55:34.520 --> 00:55:48.719
+Rack: Like, specifically AIPM sets, whatever. So, like, to understand where not to use AI is more important, because we tend to use it, like, Azure everywhere, but a lot of places, population is a better.
+
+339
+00:55:49.840 --> 00:55:52.310
+Rack: Clarity of my… Okay.
+
+340
+00:55:53.270 --> 00:55:56.169
+Rack: What else? Anything else?
+
+341
+00:55:58.240 --> 00:56:05.549
+Rack: better understanding of outcomes, or I can't just be a means for an outcome, I have to deliver outcomes. Okay.
+
+342
+00:56:06.080 --> 00:56:07.170
+Rack: Okay, now?
+
+343
+00:56:07.720 --> 00:56:11.040
+Rack: Same question, but a different attack. Why do you want to…
+
+344
+00:56:11.530 --> 00:56:13.010
+Rack: Where do you want me to opiate?
+
+345
+00:56:23.130 --> 00:56:25.220
+Rack: That has to be something, something.
+
+346
+00:56:25.660 --> 00:56:29.099
+Rack: And it is fine if you just, like, you think that's good pay.
+
+347
+00:56:29.230 --> 00:56:43.509
+Rack: Which is not true, I don't think it's true, but okay. Yeah, I come from a technical background, so product is one layer above that. Us as software developers, we used to be told by product managers, so-and-so has to be told, so…
+
+348
+00:56:43.700 --> 00:56:46.189
+Rack: They put the increase in blindness.
+
+349
+00:56:46.340 --> 00:56:49.800
+Rack: Okay? As a technical person, you are one or two implementations.
+
+350
+00:56:50.110 --> 00:56:51.740
+Rack: That is something called equity.
+
+351
+00:56:53.990 --> 00:56:59.090
+Rack: So you, like, think, you would like to, like, figure out, like, be your partners, how do you care?
+
+352
+00:56:59.140 --> 00:57:04.790
+Rack: So this job, like, involves talking to so many different teams and different sort of people.
+
+353
+00:57:04.790 --> 00:57:24.570
+Rack: And then also, like, I personally find myself, like, I'm, like, more of Jack of all trades, but not, you know, like, master of none. So, this field is more of that line, like, you don't need to be, you know, like, so detailed into the technical aspects, like, if you have some sort of idea and the knowledge about it, then also you can fail as well.
+
+354
+00:57:24.610 --> 00:57:25.449
+Rack: Here we go.
+
+355
+00:57:26.830 --> 00:57:32.040
+Rack: Sure. I think there's high ownership of results that you can… Okay.
+
+356
+00:57:32.310 --> 00:57:37.079
+Rack: I like building stuff in general. I would like little control on the what part of it.
+
+357
+00:57:37.190 --> 00:57:40.160
+Rack: Because as an engineer, I didn't get that beach. Okay.
+
+358
+00:57:40.290 --> 00:57:49.039
+Rack: Yes. I like the sense of ownership and building as well. And the moment I see the AI product, it's… I'm… I'd be very satisfied the moment I actually agree.
+
+359
+00:57:50.200 --> 00:57:57.639
+Rack: Interesting. Any, any last thoughts you have? It's one of the rarest pools where you'll just constantly keep updated,
+
+360
+00:57:58.270 --> 00:58:01.130
+Rack: to understand and speak to the tech team, especially.
+
+361
+00:58:04.290 --> 00:58:09.410
+Rack: Okay, so let me start with… In my experience, same thing.
+
+362
+00:58:09.770 --> 00:58:12.180
+Rack: And my virtually feels epic.
+
+363
+00:58:12.840 --> 00:58:14.369
+Rack: And my perspective.
+
+364
+00:58:15.130 --> 00:58:17.740
+Rack: So if you want to be a good PM,
+
+365
+00:58:18.370 --> 00:58:20.109
+Rack: as if we go for the end.
+
+366
+00:58:20.470 --> 00:58:22.039
+Rack: You hate the little kid.
+
+367
+00:58:22.880 --> 00:58:25.109
+Rack: That is my instance. Okay.
+
+368
+00:58:25.710 --> 00:58:30.160
+Rack: So, you know, somebody said, Let's take a peek.
+
+369
+00:58:30.920 --> 00:58:35.470
+Rack: you take it to an extreme. So, first of all, I always feel like if you want to build
+
+370
+00:58:35.950 --> 00:58:42.459
+Rack: You really want to. It's a great reason people feel like people get a T. When you become a TM, you realize.
+
+371
+00:58:42.840 --> 00:58:53.930
+Rack: You wanted to build, and now nobody… everybody else is building, or you are essentially telling them what to build, and you are not getting your hands into it and stuff. Now with AI, things are changing.
+
+372
+00:58:54.570 --> 00:58:55.330
+Rack: Clark?
+
+373
+00:58:55.620 --> 00:58:57.679
+Rack: There are fundamental truths that
+
+374
+00:58:58.380 --> 00:59:03.259
+Rack: Always says, you will be pushed to the limit if you get into a good product.
+
+375
+00:59:03.380 --> 00:59:08.240
+Rack: If you are genuinely going to do product work, you're gonna get pushed to think so hard.
+
+376
+00:59:08.370 --> 00:59:11.360
+Rack: I'm gonna have such… Terrible.
+
+377
+00:59:11.660 --> 00:59:15.010
+Rack: Decisions to make, that you would want to do anything but that.
+
+378
+00:59:15.570 --> 00:59:19.679
+Rack: I have literally got tears who tell me, like, can you help?
+
+379
+00:59:19.780 --> 00:59:21.010
+Rack: He deciding.
+
+380
+00:59:21.670 --> 00:59:30.640
+Rack: Because both are horrible choices. There is no good choice. Like, when you are actually going to get into a product and try to work deliver into that product.
+
+381
+00:59:31.130 --> 00:59:32.540
+Rack: Or do you want?
+
+382
+00:59:33.820 --> 00:59:41.669
+Rack: is never open, even remotely close. And they're all similar to playing. It is such that there is no peace in the job, ever.
+
+383
+00:59:41.770 --> 00:59:52.960
+Rack: Right? So that is when you will realize that that's how DM goes, and people ask me, what are the skills, right? And I'll tell you very briefly about how it works. So we talked about a lot of terms, a lot of things.
+
+384
+00:59:53.030 --> 01:00:03.399
+Rack: I am an athlete. I don't give a damn what PN. I had no interest in PN. I was invited into PN, and we got a PM, and now I've been at PM for, like, 6, 7 years. And…
+
+385
+01:00:03.920 --> 01:00:16.230
+Rack: It is because continuously, the challenges have become bigger, and I always… my personal focus is always the higher the challenge, the higher the ambiguity, the more the pressure alike. And naturally, it has ended up into this.
+
+386
+01:00:16.990 --> 01:00:27.249
+Rack: And, like, the only competition I think of is going to be joint sales. Sales is going to be in more, because you directly are on the market, right? Like, either if you're a financial trader, or a, you know.
+
+387
+01:00:27.610 --> 01:00:32.130
+Rack: Autosport racing driver, or, like, a salesperson.
+
+388
+01:00:33.130 --> 01:00:44.499
+Rack: you have numbers, vegetarian, you have food all. You're gonna have all of that pressure, and you want to make that product successful, everything, you go from definitive and defined to more productive.
+
+389
+01:00:44.940 --> 01:00:48.110
+Rack: In an AI world, when I talk to people, like.
+
+390
+01:00:48.600 --> 01:00:56.490
+Rack: Okay, you can start with, you know, whatever. You don't learn everything for you. When you say something like that, it is such an impossible task, it cannot…
+
+391
+01:00:56.850 --> 01:01:00.949
+Rack: And the more you study it, the more you realize We just ignored them.
+
+392
+01:01:01.230 --> 01:01:05.820
+Rack: of… booked for Johnson, or a booktarsen for Cindy.
+
+393
+01:01:06.240 --> 01:01:08.040
+Rack: If you remain in the queue.
+
+394
+01:01:08.360 --> 01:01:09.919
+Rack: And that's the problem.
+
+395
+01:01:10.360 --> 01:01:21.970
+Rack: The more academic we become, and the more we want to learn, the more you get hijacked into this feeling of knowing something means UI can actually do it.
+
+396
+01:01:22.670 --> 01:01:26.539
+Rack: So, when I talk about skills, one of the first ones
+
+397
+01:01:26.870 --> 01:01:35.150
+Rack: used to be higher than this, right? So when I… let's say I'm including you, right, and I've been asking you, saying, okay, let's do one short run at the beginning.
+
+398
+01:01:35.270 --> 01:01:37.020
+Rack: And Isla's saying.
+
+399
+01:01:38.080 --> 01:01:43.959
+Rack: Like, design, right? Once you've stopped, you've got an inbox engine. And I asked, okay, what would be an entity of that inbox engine?
+
+400
+01:01:44.730 --> 01:01:52.249
+Rack: And I'll say, okay, you just summarize emails for the user, these are the emails you bought, and this is what has happened. Tell me, what would you define?
+
+401
+01:01:52.570 --> 01:01:55.389
+Rack: And you have about 2 weeks to build a working protocol.
+
+402
+01:01:56.460 --> 01:01:58.070
+Rack: If you started it.
+
+403
+01:01:59.140 --> 01:02:04.699
+Rack: you could read everything about building an agent. You would read everything about Rack, you could read everything about…
+
+404
+01:02:05.210 --> 01:02:11.849
+Rack: Search, you go to research what you ask. But unless I need you to actually try to think about it, and I'll ask you.
+
+405
+01:02:12.310 --> 01:02:18.210
+Rack: Okay, tell me, how do you write it, ZVA? Now, you can give me some 3 or 4 ratings.
+
+406
+01:02:18.560 --> 01:02:20.659
+Rack: And you can citizen how it can be better.
+
+407
+01:02:21.680 --> 01:02:26.690
+Rack: I can guarantee you, That you can write a prompt.
+
+408
+01:02:27.290 --> 01:02:28.240
+Rack: We'll get this…
+
+409
+01:02:28.480 --> 01:02:41.060
+Rack: any 5.6 all, or 6 astra, or whatever, right, to false. Any of these. And it could have generated a million times better eval than you would have given in that interview.
+
+410
+01:02:42.430 --> 01:02:43.410
+Rack: So if…
+
+411
+01:02:44.270 --> 01:03:02.859
+Rack: That, in terms of, why do I need it? I don't… I'm not looking… so traditionally, we all said, you know, this is my framework for how product… this is my price framework, and this is my, you know, this is how I break down, and this is how I prioritize, and this is what… how I do customer segmentation, all that is.
+
+412
+01:03:03.350 --> 01:03:08.970
+Rack: It is a starting point, but we have converted that into hard frameworks.
+
+413
+01:03:09.280 --> 01:03:12.649
+Rack: To the point that that has taken over.
+
+414
+01:03:13.560 --> 01:03:15.560
+Rack: A poor job of me.
+
+415
+01:03:15.960 --> 01:03:34.269
+Rack: That's not touchable. And the more you text on it, the worse you eventually become at the job. You can start, you can get anywhere. But now, I immediately, because personal interviewing is just there by luck. I'm telling you, all of us, okay, where we are, is just because there was no AI at that point in time.
+
+416
+01:03:34.400 --> 01:03:41.070
+Rack: And you reached a particular position, and you will see that in the world as well, that people who are genuinely, really, really, really
+
+417
+01:03:41.360 --> 01:03:46.400
+Rack: They also extract something out of AI which is a million times better than people who actually work.
+
+418
+01:03:46.770 --> 01:03:53.170
+Rack: And the way to do it is hyperkimus. So what I look for, and what I would suggest, is whatever is that
+
+419
+01:03:53.320 --> 01:03:54.670
+Rack: That appeals to you.
+
+420
+01:03:54.930 --> 01:04:00.740
+Rack: He is so curious that you do not rest. It should not let you rest until you reach the end of it.
+
+421
+01:04:00.840 --> 01:04:05.789
+Rack: And if it is building, if it is about a particular topic, it is whatever it is, does not matter.
+
+422
+01:04:05.910 --> 01:04:06.880
+Rack: It is…
+
+423
+01:04:07.390 --> 01:04:24.100
+Rack: you have curiosity, and when I talk to you, I can understand. I can feel it. It doesn't matter. Because if it is generalized, standardized intelligence, it's not gonna work. So now, what I would ask you is, okay, show me what prompt would you write?
+
+424
+01:04:24.500 --> 01:04:33.700
+Rack: I no longer ask people to send me products, or decks, or whatever. I just ask them to send me their prompts.
+
+425
+01:04:33.920 --> 01:04:36.389
+Rack: Because that is where your thinking resides.
+
+426
+01:04:36.530 --> 01:04:39.739
+Rack: And that is what is buying value, right? Like, what…
+
+427
+01:04:40.250 --> 01:04:43.819
+Rack: back and forth with an AI is how I'll be valuable.
+
+428
+01:04:43.970 --> 01:05:02.240
+Rack: So, like this example of Velcro, of the guy whose gripper was looking at it with an engineer assistant here, and he's observing that when he's coming back, from spin grips and stomach, those small birds stick to his sheep and to his own cooler clothes. From that.
+
+429
+01:05:02.520 --> 01:05:11.390
+Rack: There were so many iterations, it took so many years to figure out how Velcro can be, and Velcro was built. And it was so many micro…
+
+430
+01:05:12.290 --> 01:05:25.419
+Rack: inventions along the way, new materials, what's the angle of that vein, how will each hit the log automatically, and how does nature start? It was just that hyper-curiosity. But whatever you're curious about, you're going to leave.
+
+431
+01:05:25.720 --> 01:05:30.919
+Rack: And that is going to be a distinctive factor for a DM interacting with it, because
+
+432
+01:05:31.520 --> 01:05:37.570
+Rack: Like, there is no way you can win against a standard air if you were to a standard.
+
+433
+01:05:39.010 --> 01:05:43.749
+Rack: Okay? So this was one. The next one is… this is another thing.
+
+434
+01:05:44.020 --> 01:05:57.470
+Rack: Your judgment has to be completely wrong. That is why, again, I come back to the next question. You tell me something which some prompt has told you and stuff, then it is a disservice to yourself and to the person you're talking to, because
+
+435
+01:05:57.730 --> 01:06:00.720
+Rack: And they would have bought as well, the same prop.
+
+436
+01:06:01.070 --> 01:06:05.680
+Rack: There is nothing distinctive. If you had done a lot of back and forth, which is very easy.
+
+437
+01:06:05.850 --> 01:06:13.820
+Rack: Send that entire chat, right? Pop on the chat, analyze the chat. Understand why you asked the question. So this goes into…
+
+438
+01:06:14.250 --> 01:06:19.449
+Rack: Be absolutely… Razor-focused. Being super…
+
+439
+01:06:20.490 --> 01:06:24.639
+Rack: So about, you know, what I started by saying, you're doing a lot of backwards.
+
+440
+01:06:25.130 --> 01:06:27.130
+Rack: In product management, everything is about.
+
+441
+01:06:27.890 --> 01:06:38.590
+Rack: Because what you want will never happen, and if that happens, the customers will take it. So, you… it's like saying, right, like, all cars, you will always want, like, I'm car guy.
+
+442
+01:06:39.030 --> 01:06:41.340
+Rack: You will always find something wrong with the rail.
+
+443
+01:06:42.190 --> 01:06:48.059
+Rack: It's either out of the kitchen. If it is, then it's, like, some multi-million dollar cars, right? You can't have it.
+
+444
+01:06:48.360 --> 01:06:53.149
+Rack: And then you're backed up anyway, as a problem. So, in every way, there is a problem.
+
+445
+01:06:53.820 --> 01:06:54.770
+Rack: Ed?
+
+446
+01:06:54.970 --> 01:07:04.880
+Rack: They… picking off on the right thing, and saying that, okay, this is what I will share, and people may completely not understand you, but yours is also fine.
+
+447
+01:07:05.130 --> 01:07:07.830
+Rack: But you have to actually actively think about it.
+
+448
+01:07:08.130 --> 01:07:10.429
+Rack: If you don't actively think about it, it's not gonna happen.
+
+449
+01:07:10.860 --> 01:07:15.499
+Rack: And, like, like I say, like, Bonsai also, like, I…
+
+450
+01:07:16.180 --> 01:07:24.660
+Rack: My reputation also is for that I don't really care. You don't lie about me. I don't care. Because if I care about it.
+
+451
+01:07:25.560 --> 01:07:27.619
+Rack: then I'm already second-guessing everything.
+
+452
+01:07:27.770 --> 01:07:29.509
+Rack: Then it's a soaking.
+
+453
+01:07:29.760 --> 01:07:37.319
+Rack: then you can't make a distinctive product. So you're a trade is my home, but you have to have there, and that is to come out in your
+
+454
+01:07:37.910 --> 01:07:45.989
+Rack: So if you're making a call, why you're making a call, the passion and the curiosity behind it is way more important than getting the right answer.
+
+455
+01:07:47.360 --> 01:07:55.230
+Rack: So this, anyways, like, the example was about how Newspace was building that, system, was building, Instagram.
+
+456
+01:07:55.560 --> 01:08:01.690
+Rack: He was building Berlin, which then, eventually, they were able to realize is so close to Foursquare, and then they were like.
+
+457
+01:08:01.830 --> 01:08:05.199
+Rack: teach everything. Not checking nothing, it's mostly about
+
+458
+01:08:05.420 --> 01:08:09.120
+Rack: instant photographs and, like, telegram, like, where I can just share photographs.
+
+459
+01:08:09.540 --> 01:08:12.239
+Rack: They continued to integrate where they were the best of the industry.
+
+460
+01:08:12.640 --> 01:08:16.460
+Rack: The third problem… Biggest problem to the world.
+
+461
+01:08:16.689 --> 01:08:17.649
+Rack: Is that…
+
+462
+01:08:18.290 --> 01:08:28.000
+Rack: our exposure is different. So before you came to ISP, you had a certain understanding of accidents. Now you come here and you realize there are people a lot better.
+
+463
+01:08:28.290 --> 01:08:30.759
+Rack: That changes what you think is good.
+
+464
+01:08:31.890 --> 01:08:33.489
+Rack: The same thing applies.
+
+465
+01:08:33.670 --> 01:08:48.479
+Rack: everything at time, and especially product. So if you are building something, so we talk about an email agent. So this is what gets now, in a way, commoditized as customer research and market research. But it's not about doing a checklist.
+
+466
+01:08:49.020 --> 01:08:52.130
+Rack: It is about, do you have understanding, or
+
+467
+01:08:52.990 --> 01:08:55.540
+Rack: Like, what, let's say, Kunal Shah calls the data for.
+
+468
+01:08:55.850 --> 01:09:01.210
+Rack: What is that data for? Why does a user Don't stop.
+
+469
+01:09:01.810 --> 01:09:03.890
+Rack: Watching this. Why?
+
+470
+01:09:04.290 --> 01:09:14.470
+Rack: Everything is engineered. Like, when you go into, like, a retail shelf, why do you pick up certain items, even if you have no intention? There is an engineering period.
+
+471
+01:09:14.680 --> 01:09:15.970
+Rack: All of it.
+
+472
+01:09:16.200 --> 01:09:28.519
+Rack: is built by people who have thought hard enough. You look at an EMS care, you look at anything that is… that has made it smart, it will be something which is about ultra-high spending.
+
+473
+01:09:28.899 --> 01:09:32.800
+Rack: So, if you are thinking that you're good at something, let's say it's custom research.
+
+474
+01:09:33.000 --> 01:09:44.630
+Rack: But find out what is the best possible customer research out there in the world. And with AI and with all of this, you can just ask an AI, right, and get exposure. So, if you have had an exposure to
+
+475
+01:09:45.130 --> 01:09:49.659
+Rack: Not the state-of-the-art office, right? I said, go pay.
+
+476
+01:09:49.770 --> 01:09:52.509
+Rack: $200 or so, one time.
+
+477
+01:09:52.950 --> 01:10:01.500
+Rack: it is gonna change your life, because you would understand what that means. I use Astra, and Astra is so far out.
+
+478
+01:10:01.500 --> 01:10:13.890
+Rack: of anything you can think, that you don't have to… like, everything else that you are thinking is a problem and a constraint, that this is what the best it can be, and, you know, you can't do ABC with AI and stuff, all of that is not the problem.
+
+479
+01:10:15.040 --> 01:10:27.860
+Rack: So having that exposure, like, get codex to build your website, right? Get… and then you… let's say you've built your website, but now you know what is the best website in the world? Like, have you seen Shopify's editions? Well.
+
+480
+01:10:28.060 --> 01:10:35.519
+Rack: look at how Shopify builds their subjects, right? Every time it now says its product features, the last one, which was on Renaissance.
+
+481
+01:10:36.250 --> 01:10:53.579
+Rack: incredible, like, mind-blowing website. Just putting so much effort into building a website for your feature launch tells you how the company operates, and what you want, right, and what you want to build. So that exposure is extremely important. So if you think this is what excites me, and this is what I want to do.
+
+482
+01:10:54.330 --> 01:10:56.469
+Rack: Go and find the absenteeism.
+
+483
+01:10:57.130 --> 01:11:06.019
+Rack: Like, have you tried Hermes? If you think memory interests you, if you want to build a memory agent, you want to back, and you want to retrieve something, go and download the best
+
+484
+01:11:06.820 --> 01:11:20.209
+Rack: figure out why they would pick the video, read their creative blogs, read their builder blogs, and go all in. That is, like… I don't know if you've heard about the 11 Star Experience that Jesse talks about, and Airbnb.
+
+485
+01:11:20.410 --> 01:11:32.350
+Rack: He says that, like, everybody, you start from a 5-star, but you have to eventually go to 11 star. You know, to be so extreme, let's say you're designing, like, a posting experience. Somebody comes to your door, somebody opens, like, one star.
+
+486
+01:11:32.460 --> 01:11:35.200
+Rack: Because refund, immediately return to market.
+
+487
+01:11:35.320 --> 01:11:45.230
+Rack: Second one, somebody opens the door, welcomes you in, punch, who starts. Then somebody opens up, there is some, you know, even refreshments there, who will freshen up, that's how that's free.
+
+488
+01:11:45.380 --> 01:12:00.029
+Rack: By the time you reach 11, it is literally before you fly, Elon Musk has come to see you, and there is this new SpaceX flag available to you, will take you to space, then get you to your place where there will be, like, an orchestra welcoming you. That is the news.
+
+489
+01:12:00.540 --> 01:12:03.430
+Rack: So, AI is better, now in AI…
+
+490
+01:12:03.590 --> 01:12:11.100
+Rack: You're gonna think of an experience. And then, if you achieve that extreme, at the highest standard, then start to figure out.
+
+491
+01:12:11.440 --> 01:12:20.409
+Rack: what is doable, and what is your edge? To which you will try to move in that direction and everything else you would make it. Otherwise, it will compete, right? If you were building a product.
+
+492
+01:12:21.200 --> 01:12:22.480
+Rack: This is the last thing.
+
+493
+01:12:22.620 --> 01:12:30.369
+Rack: All of this is essentially about courage. It is the… Skin for our skis.
+
+494
+01:12:30.790 --> 01:12:33.340
+Rack: You have to have the courage to do it.
+
+495
+01:12:33.940 --> 01:12:35.239
+Rack: Thanks for the issue.
+
+496
+01:12:35.520 --> 01:12:37.899
+Rack: He's someone who starts noting.
+
+497
+01:12:38.280 --> 01:12:42.480
+Rack: Will the support that is willing to… Take that bet.
+
+498
+01:12:42.860 --> 01:12:46.739
+Rack: splitting to follow KDiosity, even if there is a red light.
+
+499
+01:12:46.840 --> 01:12:51.980
+Rack: Even if you make the hard call, even if there is something else that's really, you know, you have…
+
+500
+01:12:52.550 --> 01:13:01.149
+Rack: So you do that, but you essentially have the courage to continue to follow the path that you started. And all of this has to be managed in a way that you can
+
+501
+01:13:02.410 --> 01:13:06.249
+Rack: rebound in an interval. That is the hardest thing.
+
+502
+01:13:06.940 --> 01:13:10.149
+Rack: And then… so, like, I'll give my…
+
+503
+01:13:10.380 --> 01:13:17.570
+Rack: There are somebody asking me for an interview or something, I will say, I need 15 minutes to talk about what interests me, and I have these 3 questions for you.
+
+504
+01:13:17.920 --> 01:13:21.039
+Rack: Most of the time, they're like, this cannot be at fun.
+
+505
+01:13:21.370 --> 01:13:26.059
+Rack: It doesn't matter, but you have to first start and ask, because I would care about what you want to ask them.
+
+506
+01:13:26.190 --> 01:13:32.880
+Rack: I care about what I'm passionate about and what I did bring. And if I feel that that person is interested.
+
+507
+01:13:33.270 --> 01:13:36.450
+Rack: For example, like, have you heard of this before?
+
+508
+01:13:37.350 --> 01:13:47.420
+Rack: So, I remember writing to Banai a long back, long, long back, and we were discussing, you know, what he was talking about how he's thinking of this food, right?
+
+509
+01:13:47.600 --> 01:13:52.769
+Rack: he had… Indra had no India team at that point in time. And we were just discussing.
+
+510
+01:13:53.000 --> 01:13:57.630
+Rack: So he anyways, has his own coach for how he's grown and stuff, as…
+
+511
+01:13:57.850 --> 01:14:03.940
+Rack: I have always been interested in, like, relationships, how interesting. We were just discussing, how do you find the very best?
+
+512
+01:14:04.570 --> 01:14:10.820
+Rack: Again, how he finds the best people, and whether I view people in a specific area, in a specific, you know, geography.
+
+513
+01:14:10.940 --> 01:14:15.970
+Rack: And it, it just, just this discussion, I was like, I should just write. Okay?
+
+514
+01:14:16.130 --> 01:14:21.079
+Rack: On this perspective, because he… He is doing crazy stuff at his agent.
+
+515
+01:14:22.310 --> 01:14:23.640
+Rack: That is just…
+
+516
+01:14:23.810 --> 01:14:30.500
+Rack: OPD, you don't need too many things. You're passionate, and you have the courage to just go and figure out what you want to do.
+
+517
+01:14:30.730 --> 01:14:32.379
+Rack: Makes sense. People will agree.
+
+518
+01:14:32.960 --> 01:14:35.939
+Rack: And so that… that is what I wanted to say.
+
+519
+01:14:36.070 --> 01:14:43.950
+Rack: And, like, When I start, I'll give an AI product, to give an answer, design anchor.
+
+520
+01:14:44.270 --> 01:14:47.239
+Rack: Everything after that is about judging consistency.
+
+521
+01:14:47.990 --> 01:14:53.760
+Rack: It's… and it is about… Remaining within the bounds of how Microsoft ties.
+
+522
+01:14:53.990 --> 01:15:09.199
+Rack: Because I am a Microsoft fan, first of all. I am representing Microsoft, I have to ensure that what Microsoft is looking for is what really matters. And this is my interpretation for how I believe they will add value all on Microsoft, and whatever other values, and whatever is a good PM.
+
+523
+01:15:09.990 --> 01:15:12.680
+Rack: Because where they are, it's very, very difficult.
+
+524
+01:15:12.890 --> 01:15:15.869
+Rack: As a… if you… if I were to start.
+
+525
+01:15:16.310 --> 01:15:29.850
+Rack: I don't think I could ever have European AIC. Impossible. I just have no temperament for tech like that, right? But now I'm here, and I keep doing whatever I…
+
+526
+01:15:30.190 --> 01:15:30.980
+Rack: Okay.
+
+527
+01:15:31.240 --> 01:15:34.350
+Rack: So that's what I wanted to pivot. This is what we had.
+
+528
+01:15:34.650 --> 01:15:37.100
+Rack: Any questions we can take up?
+
+529
+01:15:37.400 --> 01:15:38.270
+Rack: I agree.
+
+530
+01:15:38.490 --> 01:15:44.230
+Rack: Yeah, in fact, if you would have taken my interview, I don't think I would have also gotten into my interview.
+
+531
+01:15:46.220 --> 01:15:49.600
+Rack: I… none of us do not like all the old folks.
+
+532
+01:15:52.250 --> 01:15:55.609
+Rack: But yeah, we can take, a couple of those weddings if…
+
+533
+01:15:57.810 --> 01:16:03.930
+Rack: Yeah, but, like, I love someone in this building. You guys are in, like, the most premier college of the country.
+
+534
+01:16:04.110 --> 01:16:05.990
+Rack: What do you do that here?
+
+535
+01:16:06.340 --> 01:16:14.099
+Rack: What I like about this? Has someone created some app to hack and cheat on the… what is it, the exchange program?
+
+536
+01:16:14.250 --> 01:16:16.610
+Rack: Your vested denominator, whatever.
+
+537
+01:16:16.790 --> 01:16:23.130
+Rack: I never got it. Like, whatever you bid, somebody will have a lower number than they ever used to bid.
+
+538
+01:16:23.250 --> 01:16:24.500
+Rack: I don't know.
+
+539
+01:16:27.320 --> 01:16:32.990
+Rack: Thank God, so I don't think they'd admit to… For the benefit.
+
+540
+01:16:33.400 --> 01:16:37.919
+Rack: Then you submit it to us within your security search crap.
+
+541
+01:16:40.160 --> 01:16:43.329
+Rack: So, I have one question on the literature.
+
+542
+01:16:43.470 --> 01:16:51.940
+Rack: It's really interesting, but how do you, musically or dominate that purpose, or, for example, if it's all picture-related.
+
+543
+01:16:52.140 --> 01:17:07.720
+Rack: like, let's try to go back, instead of stable. How would you start, and then how would you annotate the final feature that will be able to? So, because it is perfectly good. I'll tell you, we used to call this the response in the design.
+
+544
+01:17:07.970 --> 01:17:10.300
+Rack: Now, let's say I have created
+
+545
+01:17:10.500 --> 01:17:15.059
+Rack: So that, okay, with that app, if you go left side, you go over the camera.
+
+546
+01:17:15.740 --> 01:17:18.020
+Rack: If you look at it as paradigm.
+
+547
+01:17:18.220 --> 01:17:22.510
+Rack: It was formed another, I am expecting the removal of other diagram.
+
+548
+01:17:22.630 --> 01:17:25.519
+Rack: But now you have a huge problem, how do you repay the restaurant?
+
+549
+01:17:25.730 --> 01:17:35.630
+Rack: that this feature is gonna be like this, right? If you use the latest iPhone, there is this separate camera, this will bears with the pressure, and whatever you do that stuff. Very elegantly done.
+
+550
+01:17:35.850 --> 01:17:37.310
+Rack: So, if you look at it.
+
+551
+01:17:37.840 --> 01:17:48.339
+Rack: You know, you are saying, within this confined experience of you trying to access camera or some gallery, whatever it is, I am eliminating a button.
+
+552
+01:17:49.110 --> 01:17:53.659
+Rack: I am gonna now do it so elegantly that even that swipe, even the…
+
+553
+01:17:54.670 --> 01:18:12.710
+Rack: So how much does the accelerometer record your velocity of that thump and acceleration of that thumb, and how much minimum do you have to move it to elegantly not have any stutter, to reach the end, grace wheel, slowing it down, eat the diameter coming down? Each of it
+
+554
+01:18:13.260 --> 01:18:19.689
+Rack: is highly subliminal, you may not be able to Explain it
+
+555
+01:18:19.910 --> 01:18:25.830
+Rack: It is at such subtle, subconscious level, but when everything comes together, you feel something.
+
+556
+01:18:26.090 --> 01:18:30.660
+Rack: And that's something you will not feel. 99% of your grade.
+
+557
+01:18:30.950 --> 01:18:35.159
+Rack: So it is an… everything is an opportunity to reach that level where
+
+558
+01:18:35.570 --> 01:18:47.960
+Rack: Can you try to quit? And then the engineering will say, I don't have any of this, the phones don't have it, and why does iPhone have such standards when Android struggles? So you've got infinite variation. Now, somebody will have some
+
+559
+01:18:48.140 --> 01:18:55.979
+Rack: 8-year-old Android phone with such low RAM, and even the, you know, that's… they've not updated that Android, whatever it is.
+
+560
+01:18:56.260 --> 01:19:00.560
+Rack: you can have millions of problems. Now you start to figure out and start to cut.
+
+561
+01:19:00.790 --> 01:19:06.130
+Rack: And you start to say, For this set of users, for this
+
+562
+01:19:06.680 --> 01:19:09.640
+Rack: Given experience, I am going to be on top of the last one.
+
+563
+01:19:10.550 --> 01:19:11.900
+Rack: That is valuable.
+
+564
+01:19:11.960 --> 01:19:23.569
+Rack: All faults are bad calls. And you will realize that what you wanted to do only is possible in a program. By the time before engineering will say 100 reasons why non-profit can be done, design will say they don't like any of this.
+
+565
+01:19:23.570 --> 01:19:32.560
+Rack: And, you know, your stakeholders are saying the app is, again, laggy, whatever, right? And someone else will say, there are these billion problems, why are you trying to solve this non-existent problem?
+
+566
+01:19:32.670 --> 01:19:41.230
+Rack: So, it's a constant battle for resources, for engineering, and you try to do this compared to other people.
+
+567
+01:19:42.060 --> 01:19:50.080
+Rack: Then you have to figure out where you choose to market, for which customer, for which segment, for which type of.
+
+568
+01:19:52.070 --> 01:19:53.090
+Rack: There you go.
+
+569
+01:19:53.390 --> 01:19:54.840
+Rack: Get input, whatever.
+
+570
+01:19:55.020 --> 01:20:01.930
+Rack: stars, if you want. You can put a table over it. Like, for example, in iPhone, I was setting up the latest one. When you move.
+
+571
+01:20:03.630 --> 01:20:06.310
+Rack: The core picture remains there, just the fringe.
+
+572
+01:20:06.520 --> 01:20:11.930
+Rack: That's a new paradigm, UX paradigm, and I thought it is a good way to experience
+
+573
+01:20:12.780 --> 01:20:20.389
+Rack: you know, cheek frames, the photo remains in the same place. So it's like saying I have great glasses on now, instead of the entire photo shoot.
+
+574
+01:20:21.090 --> 01:20:24.869
+Rack: So I get a sense of continuity and change between.
+
+575
+01:20:25.390 --> 01:20:33.080
+Rack: Some PM has done so much work to be just a part of what's your default lens for iPhone camera.
+
+576
+01:20:33.230 --> 01:20:35.330
+Rack: It's gonna be powerful as well.
+
+577
+01:20:35.520 --> 01:20:36.360
+Rack: Welcome.
+
+578
+01:20:36.860 --> 01:20:40.350
+Rack: A half a year to one year old. It's so many people.
+
+579
+01:20:42.130 --> 01:20:44.779
+Rack: Rob, adding on to that, I have one more question, like.
+
+580
+01:20:45.200 --> 01:20:58.599
+Rack: thinking big is a very big problem for me. It might be because of conditioning or the exposure that I have. Like, for example, I might be thinking at some level, but in the meantime, I'll wait, some people will come and will way better worship than that.
+
+581
+01:20:58.610 --> 01:21:07.400
+Rack: So, first thing is, like, how to think very big. Second one is, like, how to break it down as far as being executed, and how are you being able to execute it? The simplest way is…
+
+582
+01:21:07.860 --> 01:21:09.430
+Rack: Your dashboard explains.
+
+583
+01:21:09.810 --> 01:21:27.720
+Rack: Read as much as you can, study, like, just follow whatever is the best. Like, if I Ratch on his podcast, understand how and why his writing and his, you know, what the heck does he do, and how much pause does he take, when does he… he just lets the guest speak, what?
+
+584
+01:21:27.830 --> 01:21:39.140
+Rack: Right? What are the guests saying? And then you read best of the best, like, figure out 100 top for the questions in the world. Best of the world. So whatever is done, that is why you can't do this for everything in the world.
+
+585
+01:21:39.380 --> 01:21:42.320
+Rack: Ask, you have to follow whatever you're curious about.
+
+586
+01:21:42.640 --> 01:21:44.379
+Rack: Until it becomes sub.
+
+587
+01:21:44.720 --> 01:21:50.070
+Rack: all happened. When it starts to become, then it can look like anything.
+
+588
+01:21:50.280 --> 01:21:51.060
+Rack: Anytime.
+
+589
+01:21:51.190 --> 01:21:55.109
+Rack: Then you will no longer be that kind of trying to be interested.
+
+590
+01:21:55.260 --> 01:22:01.090
+Rack: you can generate interesting. That's the final step, but for that, you need to… it's like reading.
+
+591
+01:22:01.530 --> 01:22:12.020
+Rack: people say, I can be novel expert. You start with whatever you like. Like Jason, that was great, but I think he just changed so much for it, Tim. Because you, by a PhD, you could read a novel.
+
+592
+01:22:12.260 --> 01:22:15.620
+Rack: Once you read about 3 work, people, deeper.
+
+593
+01:22:16.130 --> 01:22:19.840
+Rack: You read 100, then you'll be like, yeah, you want to read something else.
+
+594
+01:22:20.450 --> 01:22:24.100
+Rack: Whatever, if your friends are reading, you went across. This is your friend.
+
+595
+01:22:24.540 --> 01:22:38.689
+Rack: So it applies, that's why it has to be… you have to be curious. If you are not curious, nothing works, nothing works, then you are not going to have a point of view, you're not gonna have this kind of courage, you're not gonna have the exposure.
+
+596
+01:22:39.180 --> 01:22:42.989
+Rack: The way curiosity comes before they are screaming.
+
+597
+01:22:47.020 --> 01:22:48.350
+Rack: Good, Billy.
+
+598
+01:22:49.780 --> 01:22:52.020
+Rack: Bye.
+
+599
+01:22:52.370 --> 01:22:55.129
+Rack: I guess it's weird from this, but it's better.
+
+600
+01:23:05.100 --> 01:23:06.630
+Rack: Peter's your association.
+
+601
+01:23:08.980 --> 01:23:10.060
+Rack: Wonderful.
+
+602
+01:23:10.520 --> 01:23:11.689
+Rack: I just closed it.
+
